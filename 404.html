@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — أحدهم أكل هذه الصفحة | otto creative</title>
+  <meta name="theme-color" content="#FF4B2B">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/otto-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .not-found {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(30px, 6vw, 80px) 24px;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .not-found__mark {
+      width: clamp(140px, 20vw, 240px);
+      margin-bottom: 24px;
+      color: var(--tomato);
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(-4deg); }
+    }
+    .not-found__code {
+      font-family: var(--f-display-lat);
+      font-weight: 900;
+      font-size: clamp(80px, 14vw, 160px);
+      line-height: .9;
+      color: var(--ink);
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .not-found__title {
+      font-family: var(--f-display-ar);
+      font-weight: 900;
+      font-size: clamp(28px, 4.5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+    .not-found__desc {
+      font-size: clamp(16px, 1.8vw, 20px);
+      max-width: 44ch;
+      opacity: .8;
+      margin-bottom: 36px;
+    }
+    .not-found__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--lime);
+      color: var(--ink);
+      font-family: var(--f-display-ar);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body class="not-found">
+  <div class="hero__grain"></div>
+
+  <div class="not-found__badge">خطأ 404 · الصفحة مفقودة</div>
+
+  <div class="not-found__mark">
+    <svg viewBox="-4 -4 108 108" role="img" aria-label="شعار otto المقضوم">
+      <defs>
+        <mask id="m-bite-404" maskUnits="userSpaceOnUse" x="-20" y="-20" width="140" height="140">
+          <rect x="-20" y="-20" width="140" height="140" fill="#fff"/>
+          <circle cx="97.13" cy="28.03" r="15" fill="#000"/>
+          <circle cx="86.77" cy="13.23" r="15" fill="#000"/>
+          <circle cx="71.98" cy="2.87" r="15" fill="#000"/>
+        </mask>
+      </defs>
+      <path fill="currentColor" fill-rule="evenodd" mask="url(#m-bite-404)" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+    </svg>
+  </div>
+
+  <div class="not-found__code">404</div>
+  <h1 class="not-found__title">أحدهم أكل هذه الصفحة 🍩</h1>
+  <p class="not-found__desc">الرابط الذي تبحث عنه غير موجود أو تم نقله. لا بأس، يمكنك العودة للصفحة الرئيسية وتصفح دليل الهوية كاملاً.</p>
+
+  <a href="/" class="btn" style="padding:16px 36px;font-size:18px">
+    العودة للرئيسية <span class="arrow">←</span>
+  </a>
+</body>
+</html>

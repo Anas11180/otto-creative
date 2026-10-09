@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -12 344 136" width="688" height="272" role="img" aria-labelledby="t">
+  <title id="t">otto creative — Wordmark</title>
+  <!-- Construction: baseline y=120, x-height y=20, o = ring R50 / r17, t stem = 34 (unit "x" for clear space) -->
+  <defs>
+    <mask id="bite" maskUnits="userSpaceOnUse" x="-20" y="-30" width="380" height="170">
+      <rect x="-20" y="-30" width="380" height="170" fill="#fff"/>
+      <!-- The bite: three overlapping circles on the top-right edge of the last "o" -->
+      <circle cx="333.13" cy="48.03" r="15" fill="#000"/>
+      <circle cx="322.77" cy="33.23" r="15" fill="#000"/>
+      <circle cx="307.98" cy="22.87" r="15" fill="#000"/>
+    </mask>
+  </defs>
+  <g fill="#F5EFE6">
+    <path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+    <rect x="119" y="-8" width="34" height="128" rx="4"/>
+    <rect x="183" y="-8" width="34" height="128" rx="4"/>
+    <rect x="106" y="20" width="124" height="28" rx="4"/>
+    <path fill-rule="evenodd" mask="url(#bite)" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+  </g>
+</svg>
