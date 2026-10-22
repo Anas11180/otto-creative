@@ -1180,7 +1180,72 @@
         </div>
       </div>
     </section>
-  </main>
+  <section class="otto-signup" id="checklist" aria-labelledby="otto-signup-title">
+  <div class="container otto-signup__inner">
+    <div class="otto-signup__text">
+      <span class="otto-signup__tag">مجاناً · PDF</span>
+      <h2 id="otto-signup-title" class="otto-signup__title">هل تنجح علامتك في <span>اختبار الثواني الثلاث</span>؟</h2>
+      <p class="otto-signup__lead">7 أسئلة بنعم أو لا، ومسطرة أحجام، ومربع نتيجة. اختبر شعارك في دقيقتين.</p>
+    </div>
+    <form class="otto-signup__form" id="otto-signup-form" action="https://23eefed7.sibforms.com/serve/MUIFAModo4wgfgtG7TdTFGni_AoVQCBdKSjPRyR7zd7un5JVCeeyHmhk0mCrJMcoDPLLydgZLeHBva7_P2KSPEcVEuZmjLPYtavdHwLnH1yxvetUBByYSCLj6CAENgoi4Wm4GWvTD8-PYOEPF71eMv1leke1Yp-CBNHcv7Fsjq9YfZEx326h5jBGlRYDMTs0FBo9Q5_7hza0g29FMg==" method="post">
+      <label for="otto-signup-email" class="otto-signup__sr">بريدك الإلكتروني</label>
+      <input id="otto-signup-email" type="email" name="EMAIL" required autocomplete="email"
+             inputmode="email" dir="ltr" placeholder="you@example.com">
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="otto-signup__hp" aria-hidden="true">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+      <button type="submit" class="btn btn--accent">حمّل القائمة مجاناً <span class="arrow">←</span></button>
+      <p class="otto-signup__msg" role="status" aria-live="polite" hidden></p>
+      <p class="otto-signup__privacy">نرسل لك البطاقة ونصيحة هوية من حين لآخر. لا رسائل مزعجة، ويمكنك إلغاء الاشتراك بضغطة واحدة.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+/* Uses the live site's own CSS variables (--tomato, --ink, --cream-deep, --f-*) with fallbacks */
+.otto-signup { padding-block: clamp(40px, 6vw, 72px); background: var(--cream-deep, #171719);
+  border-block: 1px solid rgba(255, 90, 31, .25); color: var(--ink, #ECE7DF); }
+.otto-signup__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; }
+.otto-signup__text { flex: 1 1 360px; }
+.otto-signup__tag { display: inline-block; font-family: var(--f-body, 'IBM Plex Sans Arabic', sans-serif); font-size: 13px;
+  font-weight: 600; color: var(--tomato, #FF5A1F); margin-bottom: 8px; }
+.otto-signup__title { margin: 0 0 8px; font-family: var(--f-display-ar, 'Alexandria', sans-serif); font-weight: 800;
+  font-size: clamp(22px, 2.6vw, 32px); line-height: 1.35; }
+.otto-signup__title span { color: var(--tomato, #FF5A1F); }
+.otto-signup__lead { margin: 0; font-family: var(--f-body, 'IBM Plex Sans Arabic', sans-serif); font-size: 16px;
+  line-height: 1.8; color: var(--ink-soft, #A8A39B); }
+.otto-signup__form { flex: 1 1 380px; display: flex; flex-wrap: wrap; gap: 10px; }
+.otto-signup__form input[type=email] { flex: 1 1 220px; min-height: 52px; padding: 0 18px; border-radius: 999px;
+  border: 1.5px solid rgba(236, 231, 223, .28); background: transparent; color: var(--ink, #ECE7DF);
+  font-family: var(--f-lat, 'Inter', sans-serif); font-size: 16px; text-align: left; }
+.otto-signup__form input[type=email]:focus { outline: none; border-color: var(--tomato, #FF5A1F); }
+.otto-signup__form .btn { min-height: 52px; white-space: nowrap; }
+.otto-signup__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.otto-signup__hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.otto-signup__msg { flex-basis: 100%; margin: 4px 0 0; font-size: 15px; color: var(--ink, #ECE7DF); }
+.otto-signup__msg a { color: var(--tomato, #FF5A1F); text-decoration: underline; }
+.otto-signup__privacy { flex-basis: 100%; margin: 4px 0 0; font-family: var(--f-body, 'IBM Plex Sans Arabic', sans-serif);
+  font-size: 13px; line-height: 1.7; color: var(--ink-soft, #A8A39B); }
+@media (max-width: 600px) { .otto-signup__form .btn { flex: 1 1 100%; justify-content: center; } }
+</style>
+<script>
+(function(){
+  var f=document.getElementById('otto-signup-form'); if(!f) return;
+  var msg=f.querySelector('.otto-signup__msg'), btn=f.querySelector('button[type=submit]');
+  var PDF='/assets/otto-3-second-test.pdf';
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); btn.disabled=true; msg.hidden=false; msg.textContent='جارٍ التسجيل…';
+    fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(d){
+      if(d&&d.success){
+        msg.innerHTML='شكراً! تم تسجيلك. <a href="'+PDF+'" download>حمّل القائمة الآن (PDF)</a>';
+        f.querySelector('input[name=EMAIL]').value=''; window.open(PDF,'_blank');
+      } else { throw 0; }
+    }).catch(function(){ msg.textContent='تعذّر التسجيل الآن، حاول مرة أخرى أو راسلنا على info@ottocreativeplus.com'; })
+    .finally(function(){ btn.disabled=false; });
+  });
+})();
+</script>
+</main>
 
   <footer class="footer">
     <div class="container">
