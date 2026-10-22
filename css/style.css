@@ -536,6 +536,9 @@ a { color: inherit; text-decoration: none; }
 .contact-steps li strong {
   color: var(--tomato); font-family: var(--f-display-ar); font-weight: 700; display: block; font-size: 18px; margin-bottom: 4px;
 }
+.contact-hours {
+  margin-top: 14px; font-size: 14px; color: var(--ink-soft); opacity: .8;
+}
 
 /* ---------- Logo ---------- */
 .logo-stage {
@@ -1001,6 +1004,12 @@ a { color: inherit; text-decoration: none; }
 .deliv-item h4 { font-family: var(--f-display-ar); font-weight: 800; font-size: 19px; margin-bottom: 8px; }
 .deliv-item p { font-size: 14.5px; opacity: .85; line-height: 1.6; }
 
+#offers .deliverables-grid { grid-template-columns: repeat(3, 1fr); }
+#offers .deliv-item { display: flex; flex-direction: column; gap: 10px; }
+#offers .deliv-item__num { width: auto; padding-inline: 12px; font-family: var(--f-body); margin-bottom: 4px; align-self: flex-start; }
+#offers .deliv-item h4 { margin-bottom: 0; }
+#offers .deliv-item .btn { margin-top: auto; align-self: flex-start; }
+
 /* Lightbox Modal */
 .lightbox {
   position: fixed; inset: 0; z-index: 300; background: rgba(10, 10, 11, .94);
@@ -1107,7 +1116,7 @@ a { color: inherit; text-decoration: none; }
   html { scroll-padding-top: 76px; }
   .section { padding-block: clamp(68px, 10vw, 110px); }
   .section-head { margin-bottom: 40px; }
-  .idea-grid, .downloads, .contact-grid, .type-specimens, .body-fonts, .logo-rules, .persona__body, .core-grid, .rewrite-grid, .logo-variants, .behance-grid, .deliverables-grid, .hero__journey, .services-list, .contact-steps {
+  .idea-grid, .downloads, .contact-grid, .type-specimens, .body-fonts, .logo-rules, .persona__body, .core-grid, .rewrite-grid, .logo-variants, .behance-grid, .deliverables-grid, #offers .deliverables-grid, .hero__journey, .services-list, .contact-steps {
     grid-template-columns: 1fr;
   }
   .board--wide { grid-column: span 1; }
