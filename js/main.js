@@ -158,7 +158,11 @@
   }
   function setMode(btn) {
     const mode = btn.dataset.mode;
-    switchBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+    switchBtns.forEach(b => {
+      const active = b === btn;
+      b.classList.toggle('is-active', active);
+      b.setAttribute('aria-selected', String(active));
+    });
     placeThumb(btn);
     const texts = $$('.rewrite__text', rewrites);
     texts.forEach(t => t.classList.add('is-swapping'));
