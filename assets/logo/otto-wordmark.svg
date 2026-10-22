@@ -10,7 +10,7 @@
       <circle cx="307.98" cy="22.87" r="15" fill="#000"/>
     </mask>
   </defs>
-  <g fill="#141414">
+  <g fill="#0F0F10">
     <path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
     <rect x="119" y="-8" width="34" height="128" rx="4"/>
     <rect x="183" y="-8" width="34" height="128" rx="4"/>

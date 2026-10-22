@@ -1,0 +1,371 @@
+/* =========================================================
+   otto creative — Concept 3: The Living Brand Sandbox
+   Editorial Dual Mode (Noir vs Warm Paper), Logo Deconstruction Lab,
+   Live Custom Mockup Generator
+   ========================================================= */
+
+@import url('style.css');
+
+/* Floating Concept Switcher Bar */
+.concept-switcher-bar {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(15, 15, 16, 0.92);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border: 1px solid rgba(255, 90, 31, 0.35);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 90, 31, 0.2);
+  direction: rtl;
+  font-family: var(--f-body);
+}
+
+.concept-switcher-bar__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--tomato);
+  letter-spacing: 0.05em;
+  padding-inline: 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.concept-switcher-bar__label::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tomato);
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.concept-switcher-bar a {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.concept-switcher-bar a:hover {
+  color: var(--ink);
+  background: rgba(236, 231, 223, 0.08);
+}
+
+.concept-switcher-bar a.is-current {
+  background: var(--tomato);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 90, 31, 0.4);
+}
+
+.nav {
+  top: 64px !important;
+}
+
+/* =========================================================
+   Dual-Theme System (Noir Dark vs Editorial Paper)
+   ========================================================= */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* When Editorial Paper Mode is Active */
+body.mode-paper {
+  --cream: #ECE7DF;
+  --cream-deep: #E2DDD5;
+  --ink: #0F0F10;
+  --ink-soft: #55524E;
+  --sand: #DDD7CE;
+  --stone: #E6E1D8;
+  background-color: var(--cream);
+  color: var(--ink);
+}
+
+body.mode-paper .nav {
+  background: rgba(236, 231, 223, 0.88);
+  border-color: rgba(15, 15, 16, 0.12);
+  color: #0F0F10;
+}
+
+body.mode-paper .nav__brand svg {
+  color: #0F0F10;
+}
+
+body.mode-paper .nav__links a:hover {
+  background: rgba(15, 15, 16, 0.06);
+}
+
+body.mode-paper .nav__links a.is-active {
+  background: rgba(15, 15, 16, 0.1);
+  color: #0F0F10;
+}
+
+body.mode-paper .btn {
+  background: #0F0F10;
+  color: #ECE7DF;
+}
+
+body.mode-paper .btn:hover {
+  box-shadow: 0 10px 24px -10px rgba(15, 15, 16, 0.4);
+}
+
+body.mode-paper .btn--ghost {
+  border-color: rgba(15, 15, 16, 0.25);
+  color: #0F0F10;
+}
+
+body.mode-paper .btn--accent {
+  background: var(--tomato);
+  color: #fff;
+}
+
+body.mode-paper .section--ink {
+  background: #E4DFD7;
+  border-block-color: rgba(15, 15, 16, 0.08);
+}
+
+body.mode-paper .eyebrow {
+  border-color: rgba(15, 15, 16, 0.2);
+  background: rgba(15, 15, 16, 0.04);
+}
+
+body.mode-paper .card-sandbox,
+body.mode-paper .mockup-sandbox {
+  background: #DFDAD1;
+  border-color: rgba(15, 15, 16, 0.12);
+}
+
+/* Theme Switcher Toggle Button in Nav */
+.theme-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255, 90, 31, 0.12);
+  border: 1.5px solid var(--tomato);
+  color: var(--tomato);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.theme-mode-btn:hover {
+  background: var(--tomato);
+  color: #fff;
+}
+
+/* =========================================================
+   Interactive Logo Architecture Lab
+   ========================================================= */
+.logo-lab-stage {
+  background: var(--cream-deep);
+  border: 1px solid rgba(236, 231, 223, 0.14);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 4vw, 48px);
+  margin-top: 32px;
+}
+
+.logo-lab-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px dashed rgba(236, 231, 223, 0.15);
+  margin-bottom: 32px;
+}
+
+.logo-lab-svg {
+  width: min(580px, 90%);
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-lab-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  border-radius: var(--radius-m);
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.control-item label {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-item input[type="range"] {
+  accent-color: var(--tomato);
+  height: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   Live Custom Mockup Simulator
+   ========================================================= */
+.mockup-sandbox {
+  background: var(--cream-deep);
+  border: 1px solid rgba(236, 231, 223, 0.12);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 4vw, 48px);
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .mockup-sandbox {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mockup-preview-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  position: relative;
+}
+
+.simulated-cup {
+  width: 140px;
+  height: 200px;
+  background: #171719;
+  border-radius: 10px 10px 24px 24px;
+  border: 2px solid rgba(236, 231, 223, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.simulated-cup__lid {
+  position: absolute;
+  top: -16px;
+  width: 154px;
+  height: 18px;
+  background: #262524;
+  border-radius: 6px 6px 2px 2px;
+}
+
+.simulated-cup__sleeve {
+  width: 100%;
+  height: 90px;
+  background: var(--sim-color, var(--tomato));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.simulated-cup__text {
+  font-family: var(--f-display-ar);
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  direction: rtl;
+}
+
+.simulated-cup__mark {
+  width: 32px;
+  height: 32px;
+  margin-top: 4px;
+  fill: #fff;
+}
+
+.mockup-controls-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mockup-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mockup-input-group label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.mockup-input-group input[type="text"] {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(236, 231, 223, 0.16);
+  border-radius: var(--radius-s);
+  padding: 12px 16px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.mockup-input-group input[type="text"]:focus {
+  border-color: var(--tomato);
+}
+
+.color-swatches-pick {
+  display: flex;
+  gap: 10px;
+}
+
+.color-swatch-opt {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-swatch-opt:hover,
+.color-swatch-opt.is-active {
+  transform: scale(1.15);
+  border-color: #fff;
+}

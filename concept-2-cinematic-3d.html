@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otto creative — المسار 2: التجربة السينمائية ثلاثية الأبعاد والتمرير الأفقي</title>
+  <meta name="description" content="المسار 2: تجربة سينمائية متطورة بالكامل مع مسرح Three.js ثلاثي الأبعاد تفاعلي، وتمرير أفقي مثبت بمعايير Awwwards العالمية.">
+  <meta name="theme-color" content="#0F0F10">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/otto-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/concept-2.css">
+</head>
+<body>
+
+  <!-- Cinema Torch / Ambient Cursor Spotlight -->
+  <div class="cinema-spotlight" aria-hidden="true"></div>
+
+  <!-- ===== Global Switcher Bar ===== -->
+  <aside class="concept-switcher-bar" aria-label="شريط المقارنة بين تصاميم الموقع الثلاثة">
+    <span class="concept-switcher-bar__label">المقارنة المباشرة:</span>
+    <a href="concept-1-supercharge.html">1 · استوديو فائق التفاعل</a>
+    <a href="concept-2-cinematic-3d.html" class="is-current">2 · سينمائي 3D وتمرير أفقي</a>
+    <a href="concept-3-brand-sandbox.html">3 · معمل الهوية والوضع المزدوج</a>
+    <a href="index.html" style="opacity:0.65">الأصلية</a>
+  </aside>
+
+  <!-- ===== SVG library ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="otto-word" viewBox="-4 -12 344 136">
+        <path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+        <rect x="119" y="-8" width="34" height="128" rx="4"/>
+        <rect x="183" y="-8" width="34" height="128" rx="4"/>
+        <rect x="106" y="20" width="124" height="28" rx="4"/>
+        <path fill-rule="evenodd" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+      </symbol>
+      <symbol id="otto-mark" viewBox="-4 -4 108 108">
+        <path fill-rule="evenodd" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero-3d" class="nav__brand" id="nav-brand">
+      <svg viewBox="-4 -12 344 136"><use href="#otto-word"/></svg>
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#hero-3d">المسرح ثلاثي الأبعاد</a></li>
+      <li><a href="#horizontal-showcase">الرحلة الأفقية</a></li>
+      <li><a href="#idea">الفكرة والهندسة</a></li>
+      <li><a href="#colors">الألوان</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="#contact" class="btn btn--accent nav__cta">ابدأ مشروعك <span class="arrow">←</span></a>
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Three.js 3D WebGL Interactive Hero ===== -->
+    <section class="hero-3d" id="hero-3d">
+      <div class="hero-3d__canvas-wrap" id="hero-3d-canvas" title="اسحب بالماوس لتدوير المجسم ثلاثي الأبعاد"></div>
+
+      <div class="hero-3d__content">
+        <div class="hero-3d__eyebrow">Interactive 3D Identity · استوديو نوار</div>
+        <h1 class="hero-3d__title">
+          نبني هويات بصرية<br>
+          <span>تكسر المألوف وتُشتهى.</span>
+        </h1>
+        <p class="hero-3d__sub">
+          حيث تلتقي الهندسة الصارمة بالقضمة الجريئة. استكشف المنظومة الفضائية التفاعلية لهوية otto creative، واسحب المجسم في الفضاء.
+        </p>
+        <div class="hero__actions" style="justify-content:center">
+          <a href="#horizontal-showcase" class="btn btn--accent">استكشف الرحلة الأفقية ↓</a>
+          <a href="#contact" class="btn btn--ghost">احجز استشارة الهوية</a>
+        </div>
+      </div>
+
+      <!-- 3D Controls -->
+      <div class="hero-3d__controls">
+        <span style="font-size:11px;color:var(--ink-soft)">تحكم بالكانفاس:</span>
+        <button class="hero-3d__control-btn" id="btn-3d-spin" type="button">تدوير سريع ↻</button>
+        <button class="hero-3d__control-btn" id="btn-3d-wireframe" type="button">الهيكل الشبكي</button>
+      </div>
+    </section>
+
+    <!-- ===== GSAP Pinned Horizontal Scroll Showcase ===== -->
+    <section class="horizontal-scroll-section" id="horizontal-showcase">
+      <div class="horizontal-progress-bar"></div>
+      
+      <div class="horizontal-scroll-head container">
+        <div>
+          <span class="eyebrow">Horizontal Odyssey · رحلة الهوية عبر التمرير</span>
+          <h2 class="h-section" style="margin-bottom:0">مرّر للأسفل… <span class="hl-tomato">للتنقل أفقياً</span> في عالم البراند.</h2>
+        </div>
+        <div style="font-size:14px;color:var(--ink-soft)">
+          استمر بالتمرير العمودي للانتقال ←
+        </div>
+      </div>
+
+      <div class="horizontal-track">
+
+        <!-- Card 1: The Concept -->
+        <article class="horizontal-card">
+          <img src="assets/images/moodboard.jpg" alt="التوجيه الفني والمودبورد" class="horizontal-card__img" loading="lazy">
+          <div class="horizontal-card__body">
+            <span class="horizontal-card__number">PHASE 01 · ART DIRECTION</span>
+            <h3 class="horizontal-card__title">التوجيه الفني والتموضع الجريء</h3>
+            <p class="horizontal-card__desc">نبدأ من استكشاف الخامات، الألوان، والمزاج العام لضمان هوية متفردة لا تشبه قوالب المنافسين المستهلكة.</p>
+          </div>
+        </article>
+
+        <!-- Card 2: Storefront Architectural Presence -->
+        <article class="horizontal-card">
+          <img src="assets/images/mockup-storefront.jpg" alt="واجهة المتجر" class="horizontal-card__img" loading="lazy">
+          <div class="horizontal-card__body">
+            <span class="horizontal-card__number">PHASE 02 · STOREFRONT & ARCHITECTURE</span>
+            <h3 class="horizontal-card__title">الحضور المعماري في الشارع</h3>
+            <p class="horizontal-card__desc">شعار يفرض هيبته في 3 ثوانٍ على واجهات المتاجر واللافتات الخارجية بتباين نوار الفاخر.</p>
+          </div>
+        </article>
+
+        <!-- Card 3: Packaging System -->
+        <article class="horizontal-card">
+          <img src="assets/images/mockup-packaging.jpg" alt="نظام التغليف" class="horizontal-card__img" loading="lazy">
+          <div class="horizontal-card__body">
+            <span class="horizontal-card__number">PHASE 03 · PACKAGING UNBOXING</span>
+            <h3 class="horizontal-card__title">منظومة التغليف وتجربة فتح العبوة</h3>
+            <p class="horizontal-card__desc">أكواب قهوة، أكياس كرافت طبيعية، وعلب تتحول إلى إعلانات متنقلة يتداولها عملاؤك على المنصات تلقائياً.</p>
+          </div>
+        </article>
+
+        <!-- Card 4: Lifestyle Touchpoints -->
+        <article class="horizontal-card">
+          <img src="assets/images/mockup-lifestyle.jpg" alt="المنتجات في الحياة اليومية" class="horizontal-card__img" loading="lazy">
+          <div class="horizontal-card__body">
+            <span class="horizontal-card__number">PHASE 04 · LIFESTYLE TOUCHPOINTS</span>
+            <h3 class="horizontal-card__title">الهوية في تفاصيل الحياة اليومية</h3>
+            <p class="horizontal-card__desc">اتساق متكامل يعكس جودة البراند في كل لمسة: من الأقمشة والأكواب إلى دفاتر الملاحظات الفاخرة.</p>
+          </div>
+        </article>
+
+        <!-- Card 5: Digital Domination -->
+        <article class="horizontal-card">
+          <img src="assets/images/facebook-cover-bold.jpg" alt="الحضور الرقمي" class="horizontal-card__img" loading="lazy">
+          <div class="horizontal-card__body">
+            <span class="horizontal-card__number">PHASE 05 · DIGITAL PRESENCE</span>
+            <h3 class="horizontal-card__title">الهيمنة الرقمية على السوشيال ميديا</h3>
+            <p class="horizontal-card__desc">قوالب مبتكرة لكسر الإطار (Feed Breakout)، أغلفة احترافية، وأصول رقمية توقف التمرير فوراً.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Idea & Architecture ===== -->
+    <section class="section" id="idea">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The Symmetry Break</span>
+          <h2 class="h-section">اسم متناظر… <span class="hl-tomato">وقضمة</span> تكسر التناظر.</h2>
+          <p class="lead">كلمة <span class="lat">otto</span> تُقرأ بالشكل نفسه من اليمين واليسار. القضمة هي التوقيع الذي يقول: نعرف القواعد جيداً، ولذلك نكسرها عن قصد.</p>
+        </div>
+
+        <div class="idea-grid">
+          <div class="mirror-stage">
+            <div class="mirror-stage__axis"></div>
+            <svg class="mirror-stage__logo" id="mirror-logo" viewBox="-4 -12 344 136"><use href="#otto-word"/></svg>
+            <div class="mirror-stage__foot">
+              <p class="mirror-stage__caption" id="mirror-caption">اقلبها، وستبقى كما هي… إلا القضمة.</p>
+              <button class="btn" id="flip-btn" type="button">اقلب الكلمة ⇋</button>
+            </div>
+          </div>
+
+          <div class="facts">
+            <article class="fact">
+              <div class="fact__icon">⇋</div>
+              <div><h3 class="h-card">متناظرة تماماً</h3><p>تناسب العربية والإنجليزية دون أي تعديل.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact__icon">8</div>
+              <div><h3 class="h-card">ثمانية بالإيطالية</h3><p>ترسم رمز اللانهاية ∞ لإبداع لا يتوقف.</p></div>
+            </article>
+            <article class="fact">
+              <div class="fact__icon">◯◯</div>
+              <div><h3 class="h-card">دائرتان هندسيتان</h3><p>صحن وفنجان ودونات وعينان تنظران إليك.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Colors ===== -->
+    <section class="section section--ink" id="colors">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Noir Palette</span>
+          <h2 class="h-section">فخامة الليل السبجي… <span class="hl-tomato">وتوهج الجمر.</span></h2>
+          <p class="lead">نظام ألوان استوديو نوار (Noir): كانفاس أسود سبجي (#0F0F10)، خطوط عظمية دافئة (#ECE7DF)، وتوقيع جمر متوهج (#FF5A1F).</p>
+        </div>
+
+        <div class="palette">
+          <button class="color color--cream" data-hex="#0F0F10"><span class="color__copy">نسخ</span><div><span class="color__role">كانفاس أساسي · 60%</span><div class="color__name">أسود نوار</div></div><div class="color__codes"><b>#0F0F10</b><span>Obsidian Noir</span></div></button>
+          <button class="color color--ink" data-hex="#ECE7DF"><span class="color__copy">نسخ</span><div><span class="color__role">نصوص وعناوين · 30%</span><div class="color__name">عظمي دافئ</div></div><div class="color__codes"><b>#ECE7DF</b><span>Warm Bone</span></div></button>
+          <button class="color color--tomato" data-hex="#FF5A1F"><span class="color__copy">نسخ</span><div><span class="color__role">توقيع وإبراز · 10%</span><div class="color__name">جمر متوهج</div></div><div class="color__codes"><b>#FF5A1F</b><span>Radiant Ember</span></div></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Direct Contact</span>
+          <h2 class="h-section">علامتك جائعة؟ <span class="hl-tomato">ابدأ مشروعك</span> معنا الآن.</h2>
+          <p class="lead">تواصل معنا عبر واتساب لمناقشة هويتك البصرية القادمة.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="social-cards">
+            <a class="social-card social-card--whatsapp" href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer">
+              <div class="social-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="social-card__body">
+                <span class="social-card__label">واتساب الأعمال المباشر</span>
+                <strong class="social-card__handle">تحدث معنا مباشرة على واتساب</strong>
+              </div>
+              <span class="social-card__arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="qr-showcase">
+            <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="qr-showcase__card">
+              <img src="assets/images/whatsapp-qr.svg" alt="باركود واتساب الأعمال">
+            </a>
+            <div class="qr-showcase__actions">
+              <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="btn btn--accent">افتح محادثة واتساب الآن <span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- External Libraries: Three.js and GSAP with ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/concept-2.js"></script>
+</body>
+</html>

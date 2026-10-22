@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 — أحدهم أكل هذه الصفحة | otto creative</title>
-  <meta name="theme-color" content="#FF4B2B">
+  <meta name="theme-color" content="#0F0F10">
   <link rel="icon" type="image/svg+xml" href="assets/logo/otto-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=noir-dark-v2">
   <style>
     .not-found {
       min-height: 100svh;
@@ -55,13 +55,15 @@
       max-width: 44ch;
       opacity: .8;
       margin-bottom: 36px;
+      color: var(--ink-soft);
     }
     .not-found__badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--lime);
-      color: var(--ink);
+      background: rgba(236, 231, 223, .08);
+      border: 1px solid rgba(236, 231, 223, .15);
+      color: var(--tomato);
       font-family: var(--f-display-ar);
       font-weight: 700;
       font-size: 14px;
@@ -91,10 +93,10 @@
   </div>
 
   <div class="not-found__code">404</div>
-  <h1 class="not-found__title">أحدهم أكل هذه الصفحة 🍩</h1>
+  <h1 class="not-found__title">أحدهم أكل هذه الصفحة</h1>
   <p class="not-found__desc">الرابط الذي تبحث عنه غير موجود أو تم نقله. لا بأس، يمكنك العودة للصفحة الرئيسية وتصفح دليل الهوية كاملاً.</p>
 
-  <a href="/" class="btn" style="padding:16px 36px;font-size:18px">
+  <a href="index.html" class="btn btn--accent" style="padding:16px 36px;font-size:18px">
     العودة للرئيسية <span class="arrow">←</span>
   </a>
 </body>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otto creative — المسار 3: معمل الهوية الحي والوضع المزدوج</title>
+  <meta name="description" content="المسار 3: وضع الورق التحريري المزدوج (Editorial Dual Mode)، مختبر تفكيك الشعار الهندسي، وتجربة المنتجات المخصصة الحية.">
+  <meta name="theme-color" content="#0F0F10">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/otto-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/concept-3.css">
+</head>
+<body>
+
+  <!-- ===== Global Switcher Bar ===== -->
+  <aside class="concept-switcher-bar" aria-label="شريط المقارنة بين تصاميم الموقع الثلاثة">
+    <span class="concept-switcher-bar__label">المقارنة المباشرة:</span>
+    <a href="concept-1-supercharge.html">1 · استوديو فائق التفاعل</a>
+    <a href="concept-2-cinematic-3d.html">2 · سينمائي 3D وتمرير أفقي</a>
+    <a href="concept-3-brand-sandbox.html" class="is-current">3 · معمل الهوية والوضع المزدوج</a>
+    <a href="index.html" style="opacity:0.65">الأصلية</a>
+  </aside>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" id="nav-brand">
+      <svg viewBox="-4 -12 344 136" style="height:28px"><path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/><rect x="119" y="-8" width="34" height="128" rx="4"/><rect x="183" y="-8" width="34" height="128" rx="4"/><rect x="106" y="20" width="124" height="28" rx="4"/><path fill-rule="evenodd" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/></svg>
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#logo-lab">مختبر الشعار</a></li>
+      <li><a href="#mockup-lab">معمل المنتجات</a></li>
+      <li><a href="#idea">الفكرة</a></li>
+      <li><a href="#colors">الألوان</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav__actions">
+      <!-- Dual Mode Button -->
+      <button class="theme-mode-btn" id="theme-toggle-btn" type="button" aria-label="تبديل وضع الورق التحريري">
+        📄 وضع الورق التحريري
+      </button>
+      <a href="#contact" class="btn nav__cta">ابدأ مشروعك</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Editorial Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="reveal">
+          <span class="eyebrow">The Editorial Laboratory · مختبر البراند</span>
+          <h1 class="h-display" style="margin-bottom:24px">
+            استوديو يصنع هويات<br>
+            <span class="hl-tomato">تُحفر في الذاكرة.</span>
+          </h1>
+          <p class="lead" style="max-width:68ch">
+            نجمع بين صرامة التخطيط الهندسي وتوقيع القضمة الجريء. جرب التبديل إلى "وضع الورق التحريري" بالأعلى، أو تفاعل مع مختبر تفكيك الشعار أدناه لتختبر دقة بناء الهوية مباشرة.
+          </p>
+          <div class="hero__actions" style="margin-top:36px">
+            <a href="#logo-lab" class="btn btn--accent">ادخل مختبر الشعار الهندسي ↓</a>
+            <a href="#mockup-lab" class="btn btn--ghost">جرّب علامتك على الكوب</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 1. Interactive Logo Architecture Lab ===== -->
+    <section class="section" id="logo-lab">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Architecture Lab · مختبر الهندسة والتفكيك</span>
+          <h2 class="h-section">فلسفة التفكيك: <span class="hl-tomato">هندسة خالصة وقضمة واحدة.</span></h2>
+          <p class="lead">حرّك المزالج أدناه لتفكيك عناصر الشعار على محورها الإنشائي (Exploded View) أو التحكم في عمق القضمة في الوقت الفعلي.</p>
+        </div>
+
+        <div class="logo-lab-stage">
+          <!-- Live Interactive SVG Logo -->
+          <div class="logo-lab-display">
+            <svg class="logo-lab-svg" viewBox="-4 -12 344 136">
+              <defs>
+                <mask id="m-lab-bite" maskUnits="userSpaceOnUse" x="-20" y="-30" width="380" height="170">
+                  <rect x="-20" y="-30" width="380" height="170" fill="#fff"/>
+                  <circle cx="333.13" cy="48.03" r="15" fill="#000"/>
+                  <circle cx="322.77" cy="33.23" r="15" fill="#000"/>
+                  <circle cx="307.98" cy="22.87" r="15" fill="#000"/>
+                </mask>
+              </defs>
+
+              <!-- CAD Grid Lines Overlay -->
+              <g id="lab-grid-lines" stroke="rgba(255, 90, 31, 0.45)" stroke-width="0.8" stroke-dasharray="2 2" fill="none" style="opacity:0; transition:opacity 0.3s">
+                <line x1="-4" x2="340" y1="120" y2="120"/>
+                <line x1="-4" x2="340" y1="20" y2="20"/>
+                <line x1="-4" x2="340" y1="70" y2="70"/>
+                <line x1="168" x2="168" y1="-12" y2="124"/>
+                <circle cx="50" cy="70" r="50"/>
+                <circle cx="286" cy="70" r="50"/>
+              </g>
+
+              <!-- Logo Parts with dynamic transforms -->
+              <g fill="currentColor">
+                <!-- First 'O' -->
+                <path id="lab-o1" style="transition:transform 0.15s ease-out; transform-origin:center;" fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+                <!-- First 'T' stem -->
+                <rect id="lab-t1" style="transition:transform 0.15s ease-out;" x="119" y="-8" width="34" height="128" rx="4"/>
+                <!-- Second 'T' stem -->
+                <rect id="lab-t2" style="transition:transform 0.15s ease-out;" x="183" y="-8" width="34" height="128" rx="4"/>
+                <!-- Crossbar -->
+                <rect id="lab-bar" style="transition:transform 0.15s ease-out; transform-origin: 168px 34px;" x="106" y="20" width="124" height="28" rx="4"/>
+                <!-- Second 'O' with Bite -->
+                <path id="lab-o2" style="transition:transform 0.15s ease-out; transform-origin:center; fill:var(--tomato);" fill-rule="evenodd" mask="url(#m-lab-bite)" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Controls Panel -->
+          <div class="logo-lab-controls">
+            <div class="control-item">
+              <label>تفكيك العناصر (Exploded View):</label>
+              <input type="range" id="lab-explode" min="0" max="3" step="0.05" value="0">
+            </div>
+            <div class="control-item">
+              <label>حجم وعمق القضمة (Bite Radius):</label>
+              <input type="range" id="lab-bite" min="5" max="30" step="1" value="15">
+            </div>
+            <div class="control-item" style="justify-content:center">
+              <label style="cursor:pointer; display:flex; align-items:center; gap:8px;">
+                <input type="checkbox" id="lab-grid-toggle" style="width:18px;height:18px;accent-color:var(--tomato)">
+                <span>إظهار شبكة البناء والنسب الهندسية</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. Live Custom Mockup Simulator ===== -->
+    <section class="section section--ink" id="mockup-lab">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Live Simulator · معمل المنتجات التفاعلي</span>
+          <h2 class="h-section">تخيّل علامتك القادمة… <span class="hl-tomato">حيّة على منتجاتك.</span></h2>
+          <p class="lead">اكتب اسم مشروعك أو علامتك المقترحة واختر لون التوقيع، لترى كيف ستتحول الهوية إلى منتج واقعي يخطف العين فوراً.</p>
+        </div>
+
+        <div class="mockup-sandbox">
+          <!-- Controls Form -->
+          <div class="mockup-controls-form">
+            <div class="mockup-input-group">
+              <label for="mockup-brand-name">اسم مشروعك / علامتك التجارية:</label>
+              <input type="text" id="mockup-brand-name" placeholder="اكتب اسم علامتك هنا…" value="مقهى الأفق">
+            </div>
+
+            <div class="mockup-input-group">
+              <label>اختر لون التوقيع البصري للأكواب:</label>
+              <div class="color-swatches-pick">
+                <button type="button" class="color-swatch-opt is-active" style="background:#FF5A1F" data-color="#FF5A1F" aria-label="Radiant Ember"></button>
+                <button type="button" class="color-swatch-opt" style="background:#2A2420" data-color="#2A2420" aria-label="Smoked Kraft"></button>
+                <button type="button" class="color-swatch-opt" style="background:#0F0F10" data-color="#0F0F10" aria-label="Obsidian Noir"></button>
+                <button type="button" class="color-swatch-opt" style="background:#C4823F" data-color="#C4823F" aria-label="Golden Ochre"></button>
+                <button type="button" class="color-swatch-opt" style="background:#1B3B36" data-color="#1B3B36" aria-label="Emerald Noir"></button>
+              </div>
+            </div>
+
+            <p style="font-size:13px; color:var(--ink-soft); line-height:1.6">
+              هذا النموذج التفاعلي يحاكي أسلوب استوديو <b>otto creative</b> في تحويل الرسومات الهندسية إلى منتجات حية قابلة للبيع والاستخدام اليومي.
+            </p>
+          </div>
+
+          <!-- Cup Preview Area -->
+          <div class="mockup-preview-area">
+            <div class="simulated-cup">
+              <div class="simulated-cup__lid"></div>
+              <div class="simulated-cup__sleeve">
+                <span class="simulated-cup__text">مقهى الأفق</span>
+                <svg class="simulated-cup__mark" viewBox="-4 -4 108 108">
+                  <path fill-rule="evenodd" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Start Working</span>
+          <h2 class="h-section">من الفكرة إلى البراند الكامل. <span class="hl-tomato">ابدأ الآن.</span></h2>
+          <p class="lead">تواصل معنا عبر واتساب لمناقشة هويتك البصرية القادمة.</p>
+        </div>
+
+        <div style="display:flex; gap:16px; flex-wrap:wrap">
+          <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="btn btn--accent">تحدث معنا على واتساب مباشرة <span class="arrow">←</span></a>
+          <a href="assets/images/whatsapp-qr.svg" download class="btn btn--ghost">تحميل باركود واتساب</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/concept-3.js"></script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otto creative — المسار 1: استوديو نوار الفائق مع حاسبة الهوية التفاعلية</title>
+  <meta name="description" content="المسار 1: استوديو نوار فائق التفاعل مع حركة كينيتية، تجسيم ثلاثي الأبعاد للبطاقات، ومخصص طلبات المشاريع الذكي لواتساب.">
+  <meta name="theme-color" content="#0F0F10">
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo/otto-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/concept-1.css">
+</head>
+<body>
+
+  <!-- ===== Global Switcher Bar for Comparing Concepts ===== -->
+  <aside class="concept-switcher-bar" aria-label="شريط المقارنة بين تصاميم الموقع الثلاثة">
+    <span class="concept-switcher-bar__label">المقارنة المباشرة:</span>
+    <a href="concept-1-supercharge.html" class="is-current">1 · استوديو فائق التفاعل</a>
+    <a href="concept-2-cinematic-3d.html">2 · سينمائي 3D وتمرير أفقي</a>
+    <a href="concept-3-brand-sandbox.html">3 · معمل الهوية والوضع المزدوج</a>
+    <a href="index.html" style="opacity:0.65">الأصلية</a>
+  </aside>
+
+  <!-- ===== SVG library ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="m-bite-word" maskUnits="userSpaceOnUse" x="-20" y="-30" width="380" height="170">
+        <rect x="-20" y="-30" width="380" height="170" fill="#fff"/>
+        <circle cx="333.13" cy="48.03" r="15" fill="#000"/>
+        <circle cx="322.77" cy="33.23" r="15" fill="#000"/>
+        <circle cx="307.98" cy="22.87" r="15" fill="#000"/>
+      </mask>
+      <mask id="m-bite-mark" maskUnits="userSpaceOnUse" x="-20" y="-20" width="140" height="140">
+        <rect x="-20" y="-20" width="140" height="140" fill="#fff"/>
+        <circle cx="97.13" cy="28.03" r="15" fill="#000"/>
+        <circle cx="86.77" cy="13.23" r="15" fill="#000"/>
+        <circle cx="71.98" cy="2.87" r="15" fill="#000"/>
+      </mask>
+      <linearGradient id="bad-grad" x1="0" x2="1">
+        <stop offset="0" stop-color="#7B2FF7"/><stop offset="1" stop-color="#00C2FF"/>
+      </linearGradient>
+
+      <symbol id="otto-word" viewBox="-4 -12 344 136">
+        <path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+        <rect x="119" y="-8" width="34" height="128" rx="4"/>
+        <rect x="183" y="-8" width="34" height="128" rx="4"/>
+        <rect x="106" y="20" width="124" height="28" rx="4"/>
+        <path fill-rule="evenodd" mask="url(#m-bite-word)" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+      </symbol>
+
+      <symbol id="otto-mark" viewBox="-4 -4 108 108">
+        <path fill-rule="evenodd" mask="url(#m-bite-mark)" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" id="nav-brand" aria-label="otto creative">
+      <svg viewBox="-4 -12 344 136"><use href="#otto-word"/></svg>
+    </a>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#idea" id="nav-idea">الفكرة</a></li>
+      <li><a href="#core" id="nav-core">الجوهر</a></li>
+      <li><a href="#logo" id="nav-logo">الشعار</a></li>
+      <li><a href="#colors" id="nav-colors">الألوان</a></li>
+      <li><a href="#type" id="nav-type">الخطوط</a></li>
+      <li><a href="#applications" id="nav-apps">المعرض</a></li>
+      <li><a href="#brief-builder" id="nav-builder" style="color:var(--tomato)">تخصيص مشروعك</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="sound-toggle-btn" id="sound-toggle" type="button" aria-label="تفعيل الصوت">
+        <span>🔇</span> المؤثرات الصوتية
+      </button>
+      <a href="#brief-builder" class="btn nav__cta" id="nav-cta">ابدأ مشروعك <span class="arrow">←</span></a>
+      <button class="nav__toggle" id="nav-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Kinetic Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__grain"></div>
+      <div class="hero__ambient-glow"></div>
+      <div class="container">
+
+        <h1 class="hero__logo-wrap" id="hero-logo" title="اضغط لتجربة القضمة التفاعلية والصوت المجهري!">
+          <span class="sr-only">otto creative</span>
+          <svg class="hero__logo" id="hero-svg" viewBox="-4 -12 344 136" aria-hidden="true">
+            <defs>
+              <mask id="m-hero-bite" maskUnits="userSpaceOnUse" x="-20" y="-30" width="380" height="170">
+                <rect x="-20" y="-30" width="380" height="170" fill="#fff"/>
+                <circle cx="307.98" cy="22.87" r="0" fill="#000">
+                  <animate class="bite-in" attributeName="r" from="0" to="15" dur=".22s" begin="indefinite" fill="freeze"/>
+                  <animate class="bite-out" attributeName="r" to="0" dur=".3s" begin="indefinite" fill="freeze"/>
+                </circle>
+                <circle cx="322.77" cy="33.23" r="0" fill="#000">
+                  <animate class="bite-in" attributeName="r" from="0" to="15" dur=".22s" begin="indefinite" fill="freeze"/>
+                  <animate class="bite-out" attributeName="r" to="0" dur=".3s" begin="indefinite" fill="freeze"/>
+                </circle>
+                <circle cx="333.13" cy="48.03" r="0" fill="#000">
+                  <animate class="bite-in" attributeName="r" from="0" to="15" dur=".22s" begin="indefinite" fill="freeze"/>
+                  <animate class="bite-out" attributeName="r" to="0" dur=".3s" begin="indefinite" fill="freeze"/>
+                </circle>
+              </mask>
+            </defs>
+            <g fill="currentColor">
+              <path fill-rule="evenodd" d="M0,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+              <rect x="119" y="-8" width="34" height="128" rx="4"/>
+              <rect x="183" y="-8" width="34" height="128" rx="4"/>
+              <rect x="106" y="20" width="124" height="28" rx="4"/>
+              <path fill-rule="evenodd" mask="url(#m-hero-bite)" d="M236,70a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M269,70a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+            </g>
+          </svg>
+          <span class="hero__hint">اضغط على الشعار… وخذ قضمة</span>
+        </h1>
+
+        <div class="hero__bottom">
+          <div class="reveal">
+            <p class="hero__tagline">شريكك في بناء هوية بصرية متكاملة.<span class="lat-display">From Concept to Complete Brand · Brands worth a bite.</span></p>
+            <div class="hero__actions">
+              <a href="#brief-builder" class="btn btn--accent" id="hero-cta-builder">فصّل مشروعك الآن <span class="arrow">←</span></a>
+              <a href="#applications" class="btn" id="hero-cta-portfolio">استعرض لوحات الهوية</a>
+              <a href="#idea" class="btn btn--ghost" id="hero-cta-idea">اكتشف فلسفة البراند</a>
+            </div>
+          </div>
+          <div class="badge reveal" aria-hidden="true">
+            <svg class="badge__ring" viewBox="0 0 160 160">
+              <defs><path id="badge-circle" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs>
+              <text><textPath href="#badge-circle">BRANDS WORTH A BITE • OTTO CREATIVE • </textPath></text>
+            </svg>
+            <svg class="badge__core" viewBox="-4 -4 108 108"><use href="#otto-mark"/></svg>
+          </div>
+        </div>
+
+        <!-- Metric Counter Strip -->
+        <div class="hero-stats reveal">
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__num" data-target="100" data-suffix="%">0%</span>
+            <span class="hero-stat-card__label">هويات مخصصة بالكامل بدون قوالب جاهزة</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__num" data-target="3" data-suffix=" ثوانٍ">0</span>
+            <span class="hero-stat-card__label">زمن التقاط العين للشعار وتمييز الهوية</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__num" data-target="360" data-suffix="°">0°</span>
+            <span class="hero-stat-card__label">تغطية شاملة: من الاستراتيجية إلى التغليف والواجهات</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="hero-stat-card__num" data-target="50" data-suffix="+">0+</span>
+            <span class="hero-stat-card__label">أصل رقمي ومطبوع يُسلّم مع دليل البراند الكامل</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Interactive Brief Builder & Lead Configurator (The Star Feature) ===== -->
+    <section class="section brief-builder-section" id="brief-builder">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Project Configurator · فصّل هويتك</span>
+          <h2 class="h-section">حدّد ملامح مشروعك… <span class="hl-tomato">واحصل على خطة انطلاق فورية.</span></h2>
+          <p class="lead">اختر طبيعة مشروعك والمخرجات التي تحتاجها بنقرات سريعة، وسيقوم النظام بتجهيز ملخص مخصص لنبدأ فوراً عبر محادثة واتساب مباشرة.</p>
+        </div>
+
+        <div class="brief-builder-card reveal">
+          <div class="brief-steps">
+
+            <!-- Step 1: Project Type -->
+            <div class="brief-step">
+              <div class="brief-step__head">
+                <span class="brief-step__number">1</span>
+                <h3 class="brief-step__title">ما هي طبيعة مشروعك التجاري؟</h3>
+                <span class="brief-step__desc">اختر واحداً</span>
+              </div>
+              <div class="brief-options-grid">
+                <label class="brief-option is-selected" data-group="type" data-val="مشروع تجاري جديد (Start from Scratch)">
+                  <span class="brief-option__icon">🚀</span>
+                  <span class="brief-option__name">مشروع تجاري جديد</span>
+                  <span class="brief-option__sub">بناء هوية جديدة كلياً من الصفر للنزول للسوق بقوة</span>
+                </label>
+                <label class="brief-option" data-group="type" data-val="إعادة بناء وتجديد الهوية (Rebranding)">
+                  <span class="brief-option__icon">⚡</span>
+                  <span class="brief-option__name">تجديد هوية قائمة (Rebranding)</span>
+                  <span class="brief-option__sub">ترقية البراند الحالي ليعكس توسع الشركة وفخامتها</span>
+                </label>
+                <label class="brief-option" data-group="type" data-val="مقهى أو مطعم مختص (F&B / Hospitality)">
+                  <span class="brief-option__icon">☕</span>
+                  <span class="brief-option__name">مقهى أو مطعم مختص</span>
+                  <span class="brief-option__sub">تركيز كبير على الأكواب، التغليف، واللافتات والمنيو</span>
+                </label>
+                <label class="brief-option" data-group="type" data-val="شركة تقنية / ناشئة (Tech & Digital)">
+                  <span class="brief-option__icon">💻</span>
+                  <span class="brief-option__name">شركة تقنية / استثمارية</span>
+                  <span class="brief-option__sub">هوية تركز على الواجهات الرقمية، العروض الاستثمارية، وتطبيقات الجوال</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 2: Scope Requirements -->
+            <div class="brief-step">
+              <div class="brief-step__head">
+                <span class="brief-step__number">2</span>
+                <h3 class="brief-step__title">ما هي المخرجات الأساسية التي تريد تضمينها؟</h3>
+                <span class="brief-step__desc">يمكنك اختيار أكثر من خيار</span>
+              </div>
+              <div class="brief-options-grid">
+                <label class="brief-option is-selected" data-group="scope" data-val="نظام الشعار والهوية البصرية المتكاملة">
+                  <span class="brief-option__icon">💎</span>
+                  <span class="brief-option__name">نظام الشعار والألوان والخطوط</span>
+                  <span class="brief-option__sub">الشعار الهندسي، الشبكة، لوحة الألوان 60·30·10، وتراخيص الخطوط</span>
+                </label>
+                <label class="brief-option is-selected" data-group="scope" data-val="تصميم التغليف والعبوات">
+                  <span class="brief-option__icon">📦</span>
+                  <span class="brief-option__name">التغليف والعبوات والأكياس</span>
+                  <span class="brief-option__sub">أكواب، أكياس كرافت، ملصقات، وأشرطة تغليف مجهزة للطباعة</span>
+                </label>
+                <label class="brief-option" data-group="scope" data-val="حضور السوشيال ميديا وقوالب الإطلاق">
+                  <span class="brief-option__icon">📱</span>
+                  <span class="brief-option__name">حزمة السوشيال ميديا</span>
+                  <span class="brief-option__sub">أغلفة فيسبوك، بوستات إنستغرام لكسر الإطار، وهايلايت ستوري</span>
+                </label>
+                <label class="brief-option" data-group="scope" data-val="تصميم الواجهات والموقع الإلكتروني">
+                  <span class="brief-option__icon">🌐</span>
+                  <span class="brief-option__name">واجهة الموقع وتجربة المستخدم</span>
+                  <span class="brief-option__sub">تصميم وتطوير صفحة هبوط تفاعلية تعكس روح البراند</span>
+                </label>
+                <label class="brief-option" data-group="scope" data-val="دليل الهوية الشامل (Brand Guidelines PDF)">
+                  <span class="brief-option__icon">📖</span>
+                  <span class="brief-option__name">دليل الهوية الشامل (Brand Book)</span>
+                  <span class="brief-option__sub">مرجع إرشادي متكامل يضمن ضبط معايير البراند لأي فريق لاحق</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Timeline -->
+            <div class="brief-step">
+              <div class="brief-step__head">
+                <span class="brief-step__number">3</span>
+                <h3 class="brief-step__title">ما هو موعد الإطلاق المتوقع؟</h3>
+                <span class="brief-step__desc">اختر واحداً</span>
+              </div>
+              <div class="brief-options-grid">
+                <label class="brief-option" data-group="timeline" data-val="إطلاق عاجل وسريع (خلال أسبوعين إلى 3 أسابيع)">
+                  <span class="brief-option__icon">🔥</span>
+                  <span class="brief-option__name">عاجل وسريع</span>
+                  <span class="brief-option__sub">جاهزون للانطلاق السريع خلال أسبوعين إلى 3 أسابيع</span>
+                </label>
+                <label class="brief-option is-selected" data-group="timeline" data-val="خطة إطلاق قياسية متأنية (3 إلى 5 أسابيع)">
+                  <span class="brief-option__icon">🗓️</span>
+                  <span class="brief-option__name">خطة إطلاق قياسية</span>
+                  <span class="brief-option__sub">وقت كافٍ لدراسة كل تفصيل وتجربة الخامات (3 - 5 أسابيع)</span>
+                </label>
+                <label class="brief-option" data-group="timeline" data-val="مرحلة التخطيط والدراسة (أكثر من شهر)">
+                  <span class="brief-option__icon">🧭</span>
+                  <span class="brief-option__name">مرحلة التخطيط المسبق</span>
+                  <span class="brief-option__sub">أريد التنسيق المبكر وحجز موعد لبدء المشروع لاحقاً</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Generated Summary Bar -->
+          <div class="brief-summary-box">
+            <div>
+              <h4 class="brief-summary__title">ملخص طلبك الجاهز للمحادثة:</h4>
+              <p class="brief-summary__preview" id="brief-summary-text">
+                جاري تحديث ملخصك…
+              </p>
+            </div>
+            <div>
+              <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="brief-whatsapp-btn" id="brief-whatsapp-cta">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>ابدأ محادثة واتساب الآن ←</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 01 Idea ===== -->
+    <section class="section" id="idea">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 — The Big Idea</span>
+          <h2 class="h-section">اسم متناظر… <span class="hl-tomato">وقضمة</span> تكسر التناظر.</h2>
+          <p class="lead">كلمة <span class="lat">otto</span> تُقرأ بالشكل نفسه من اليمين واليسار. هي متوازنة تماماً، ونحن كسرنا هذا التوازن عن قصد. القضمة هي التوقيع الذي يقول: <span class="hl">نعرف القواعد جيداً، ولذلك نكسرها.</span></p>
+        </div>
+
+        <div class="idea-grid">
+          <div class="mirror-stage reveal tilt-card">
+            <div class="mirror-stage__axis"></div>
+            <svg class="mirror-stage__logo" id="mirror-logo" viewBox="-4 -12 344 136" role="img" aria-label="otto"><use href="#otto-word"/></svg>
+            <div class="mirror-stage__foot">
+              <p class="mirror-stage__caption" id="mirror-caption">اقلبها، وستبقى كما هي… إلا القضمة.</p>
+              <button class="btn" id="flip-btn" type="button">اقلب الكلمة ⇋</button>
+            </div>
+          </div>
+
+          <div class="facts">
+            <article class="fact reveal tilt-card">
+              <div class="fact__icon">⇋</div>
+              <div><h3 class="h-card">كلمة متناظرة</h3><p>تُقرأ بالاتجاهين، فتناسب العربية والإنجليزية دون أي تعديل.</p></div>
+            </article>
+            <article class="fact reveal tilt-card" style="--d:.15s">
+              <div class="fact__icon">8</div>
+              <div><h3 class="h-card">ثمانية بالإيطالية</h3><p>حرفا الـ O فوق بعضهما يرسمان 8 أو ∞، أي إبداعاً لا ينتهي.</p></div>
+            </article>
+            <article class="fact reveal tilt-card" style="--d:.25s">
+              <div class="fact__icon">◯◯</div>
+              <div><h3 class="h-card">دائرتان</h3><p>صحن وفنجان ودونات وعينان تنظران إليك: ارتباط فوري بعالم الطعام.</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 08 Applications & Showcase ===== -->
+    <section class="section" id="applications">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">08 — Showcase</span>
+          <h2 class="h-section">من الفكرة إلى <span class="hl-tomato">البراند الكامل</span> في الواقع.</h2>
+          <p class="lead">تطبيقات الهوية عبر اللوحات الواقعية، التغليف، والمطبوعات الفاخرة.</p>
+        </div>
+
+        <div class="behance-grid" id="behance-grid">
+          <figure class="board board--wide reveal tilt-card" data-cat="physical" data-full="assets/images/mockup-storefront.jpg" data-title="الحضور المعماري وواجهة العلامة">
+            <div class="board__media">
+              <img src="assets/images/mockup-storefront.jpg" alt="تطبيق هوية otto creative على واجهة المتجر" loading="lazy">
+              <span class="board__zoom">⤢ عرض اللوحة</span>
+            </div>
+            <figcaption class="board__meta">
+              <div><span class="board__num">01</span><h4>الحضور المعماري وواجهة العلامة</h4></div>
+              <p>وضوح بصري يخطف العين في الشارع من أول نظرة.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="board reveal tilt-card" data-cat="physical" data-full="assets/images/mockup-packaging.jpg" data-title="منظومة التغليف والعبوات">
+            <div class="board__media">
+              <img src="assets/images/mockup-packaging.jpg" alt="نظام التغليف والعبوات" loading="lazy">
+              <span class="board__zoom">⤢ عرض اللوحة</span>
+            </div>
+            <figcaption class="board__meta">
+              <div><span class="board__num">02</span><h4>منظومة التغليف والعبوات</h4></div>
+              <p>عبوات تتحول إلى إعلان متنقل يتصوّره العملاء تلقائياً.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="board reveal tilt-card" data-cat="physical" data-full="assets/images/mockup-lifestyle.jpg" data-title="الهوية في الحياة اليومية">
+            <div class="board__media">
+              <img src="assets/images/mockup-lifestyle.jpg" alt="تطبيقات الهوية في الحياة اليومية" loading="lazy">
+              <span class="board__zoom">⤢ عرض اللوحة</span>
+            </div>
+            <figcaption class="board__meta">
+              <div><span class="board__num">03</span><h4>الهوية في تفاصيل المنتجات</h4></div>
+              <p>اتساق كامل للشخصية البصرية عبر مختلف الخامات.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="h-section">جاهز لبدء علامتك؟ <span class="hl-tomato">تحدث معنا مباشرة.</span></h2>
+          <p class="lead">يسعدنا استقبال استفسارك ومناقشة تفاصيل مشروعك عبر واتساب أو تصفح حساباتنا على المنصات.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="social-cards">
+            <a class="social-card social-card--whatsapp reveal tilt-card" href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer">
+              <div class="social-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="social-card__body">
+                <span class="social-card__label">واتساب الأعمال المباشر</span>
+                <strong class="social-card__handle">محادثة فورية مع الفريق</strong>
+                <span class="social-card__url lat">wa.me/message/A5AWO6AT3BUGH1</span>
+              </div>
+              <span class="social-card__arrow">↗</span>
+            </a>
+            <a class="social-card social-card--instagram reveal tilt-card" href="https://www.instagram.com/ottocreativeplus/" target="_blank" rel="noopener noreferrer">
+              <div class="social-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div class="social-card__body">
+                <span class="social-card__label">إنستغرام</span>
+                <strong class="social-card__handle lat">@ottocreativeplus</strong>
+              </div>
+              <span class="social-card__arrow">↗</span>
+            </a>
+          </div>
+
+          <div class="qr-showcase reveal tilt-card">
+            <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="qr-showcase__card">
+              <img src="assets/images/whatsapp-qr.svg" alt="باركود واتساب الأعمال">
+            </a>
+            <div class="qr-showcase__actions">
+              <a href="https://wa.me/message/A5AWO6AT3BUGH1" target="_blank" rel="noopener noreferrer" class="btn btn--accent">افتح محادثة واتساب الآن <span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/concept-1.js"></script>
+</body>
+</html>

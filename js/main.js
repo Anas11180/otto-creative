@@ -4,9 +4,7 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Marquee: duplicate content for a seamless loop ---------- */
-  const track = $('#marquee-track');
-  if (track) track.innerHTML += track.innerHTML + track.innerHTML;
+  /* ---------- Marquee: purely CSS-driven seamless loop ---------- */
 
   /* ---------- Hero: the bite ---------- */
   const heroWrap = $('#hero-logo');
@@ -154,6 +152,7 @@
   const thumb = $('#switch-thumb');
   const switchBtns = $$('#voice-switch button');
   function placeThumb(btn) {
+    if (!btn || !thumb) return;
     thumb.style.width = `${btn.offsetWidth}px`;
     thumb.style.left = `${btn.offsetLeft}px`;
   }
@@ -174,4 +173,88 @@
     document.fonts ? document.fonts.ready.then(init) : init();
     window.addEventListener('resize', init);
   }
+
+  /* ---------- Behance Showcase: Filter + Lightbox ---------- */
+  const filterBtns = $$('.showcase-filters [data-filter]');
+  const boards = $$('#behance-grid .board');
+  filterBtns.forEach(btn => btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    filterBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+    boards.forEach(card => {
+      const match = f === 'all' || card.dataset.cat === f;
+      card.classList.toggle('is-hidden', !match);
+    });
+  }));
+
+  const lightbox = $('#lightbox');
+  const lbImg = $('#lightbox-img');
+  const lbTitle = $('#lightbox-title');
+  const lbDesc = $('#lightbox-desc');
+  const lbClose = $('#lightbox-close');
+
+  function openLightbox(board) {
+    if (!lightbox) return;
+    lbImg.src = board.dataset.full;
+    lbImg.alt = board.dataset.title || '';
+    lbTitle.textContent = board.dataset.title || '';
+    lbDesc.textContent = board.dataset.desc || '';
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  boards.forEach(b => b.addEventListener('click', () => openLightbox(b)));
+  if (lbClose) lbClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    window.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox(); });
+  }
+
+  /* ---------- Mobile Navigation Drawer & Touch Interactions ---------- */
+  const navToggle = $('#nav-toggle');
+  const navLinks = $('#nav-links');
+
+  function closeMobileNav() {
+    if (!navToggle || !navLinks) return;
+    navToggle.classList.remove('is-active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('is-open');
+  }
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', e => {
+      e.stopPropagation();
+      const open = navLinks.classList.toggle('is-open');
+      navToggle.classList.toggle('is-active', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    links.forEach(l => l.addEventListener('click', closeMobileNav));
+    document.addEventListener('click', e => {
+      if (navLinks.classList.contains('is-open') && !nav.contains(e.target)) closeMobileNav();
+    });
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navLinks.classList.contains('is-open')) closeMobileNav();
+    });
+  }
+
+  /* Tap-to-flip for Business Card & Voice Cards on touchscreens */
+  const appCard = $('.app--card');
+  const bcard = $('.bcard', appCard || document);
+  if (appCard && bcard) {
+    appCard.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      bcard.classList.toggle('is-flipped');
+    });
+  }
+
+  $$('.voice-pair').forEach(vp => {
+    vp.addEventListener('click', () => vp.classList.toggle('is-flipped'));
+  });
 })();

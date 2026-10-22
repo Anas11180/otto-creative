@@ -8,5 +8,5 @@
       <circle cx="71.98" cy="2.87" r="15" fill="#000"/>
     </mask>
   </defs>
-  <path fill="#FF4B2B" fill-rule="evenodd" mask="url(#bite)" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
+  <path fill="#FF5A1F" fill-rule="evenodd" mask="url(#bite)" d="M0,50a50,50 0 1,0 100,0a50,50 0 1,0 -100,0Z M33,50a17,17 0 1,0 34,0a17,17 0 1,0 -34,0Z"/>
 </svg>
