@@ -1235,7 +1235,11 @@
   var PDF='/assets/otto-3-second-test.pdf';
   f.addEventListener('submit',function(e){
     e.preventDefault(); btn.disabled=true; msg.hidden=false; msg.textContent='جارٍ التسجيل…';
-    fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(r){return r.json();}).then(function(d){
+    fetch(f.action,{method:'POST',body:new FormData(f),redirect:'manual'}).then(function(r){
+      if(r.type==='opaqueredirect'||(r.status>=300&&r.status<400)) return {success:true};
+      if(!r.ok) return {success:false};
+      return r.json().catch(function(){return {success:true};});
+    }).then(function(d){
       if(d&&d.success){
         msg.innerHTML='شكراً! تم تسجيلك. <a href="'+PDF+'" download>حمّل القائمة الآن (PDF)</a>';
         f.querySelector('input[name=EMAIL]').value=''; window.open(PDF,'_blank');
