@@ -10,6 +10,21 @@
 
     gtag('config', 'AW-17512667810');
   </script>
+  <!-- Event snippet for جهة الاتصال conversion page -->
+  <script>
+    function gtagReportContactConversion() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {'send_to': 'AW-17512667810/xv1-CM3Ig5MbEKK12J5B'});
+      }
+    }
+    if (window.location.hash === '#contact') {
+      gtagReportContactConversion();
+    }
+    document.addEventListener('click', function(e) {
+      var link = e.target && e.target.closest ? e.target.closest('a[href*="wa.me"], a[href^="mailto:"], a[href="#contact"]') : null;
+      if (link) gtagReportContactConversion();
+    });
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>otto creative | تصميم هوية بصرية في أنطاليا، تركيا</title>
@@ -1574,6 +1589,7 @@
       return r.json().catch(function(){return {success:true};});
     }).then(function(d){
       if(d&&d.success){
+        if(typeof gtagReportContactConversion==='function') gtagReportContactConversion();
         msg.innerHTML='شكراً! تم تسجيلك. <a href="'+PDF+'" download>حمّل القائمة الآن (PDF)</a>';
         f.querySelector('input[name=EMAIL]').value=''; window.open(PDF,'_blank');
       } else { throw 0; }
