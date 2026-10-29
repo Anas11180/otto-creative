@@ -3,7 +3,20 @@
 [build]
   publish = "."
 
-# Ensure 404 page is properly served
+# Canonicalize default .netlify.app subdomain to primary custom domain (prevent duplicate indexing)
+[[redirects]]
+  from = "https://sensational-choux-9de152.netlify.app/*"
+  to = "https://ottocreativeplus.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://sensational-choux-9de152.netlify.app/*"
+  to = "https://ottocreativeplus.com/:splat"
+  status = 301
+  force = true
+
+# Ensure 404 page is properly served (keep specific redirects above this catch-all rule)
 [[redirects]]
   from = "/*"
   to = "/404.html"
@@ -13,17 +26,22 @@
 [[headers]]
   for = "/*"
   [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Prevent indexing of internal prototype and 404 routes
+# Prevent indexing of internal prototype, poster, and 404 routes
 [[headers]]
   for = "/404.html"
   [headers.values]
     X-Robots-Tag = "noindex, follow"
+
+[[headers]]
+  for = "/posters/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/concept-1-supercharge.html"
@@ -51,7 +69,7 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# Cache static assets (CSS, JS, Fonts, Images)
+# Cache static assets (Fonts immutable; CSS, JS, Images, Logo, PDF revalidatable)
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -63,6 +81,21 @@
     Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
 
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/fonts/*"
   [headers.values]
-    Cache-Control = "public, max-age=2592000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/assets/logo/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/assets/otto-3-second-test.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=86400"

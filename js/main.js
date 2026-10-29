@@ -196,8 +196,11 @@
   const lbDesc = $('#lightbox-desc');
   const lbClose = $('#lightbox-close');
 
+  let lastFocusedBoard = null;
+
   function openLightbox(board) {
     if (!lightbox) return;
+    lastFocusedBoard = board;
     lbImg.src = board.dataset.full;
     lbImg.alt = board.dataset.title || '';
     lbTitle.textContent = board.dataset.title || '';
@@ -205,6 +208,7 @@
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    if (lbClose) lbClose.focus();
   }
 
   function closeLightbox() {
@@ -212,9 +216,21 @@
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (lastFocusedBoard && typeof lastFocusedBoard.focus === 'function') {
+      lastFocusedBoard.focus();
+      lastFocusedBoard = null;
+    }
   }
 
-  boards.forEach(b => b.addEventListener('click', () => openLightbox(b)));
+  boards.forEach(b => {
+    b.addEventListener('click', () => openLightbox(b));
+    b.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(b);
+      }
+    });
+  });
   if (lbClose) lbClose.addEventListener('click', closeLightbox);
   if (lightbox) {
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });

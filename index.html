@@ -270,7 +270,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Inter:wght@400;500;600&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="css/style.css?v=noir-v10-seo">
+  <link rel="stylesheet" href="css/style.css?v=noir-v11-seo">
   <style>
     /* Critical fallback to guarantee continuous marquee animation even if cached */
     .marquee {
@@ -392,8 +392,8 @@
       <div class="hero__grain"></div>
       <div class="container">
 
-        <h1 class="hero__logo-wrap" id="hero-logo" title="اضغط لتجربة القضمة التفاعلية!">
-          <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">OTTO Creative — استوديو تصميم هوية بصرية وشعارات في أنطاليا، تركيا</span>
+        <div class="hero__logo-wrap" id="hero-logo" title="اضغط لتجربة القضمة التفاعلية!">
+          <h1 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">OTTO Creative — استوديو تصميم هوية بصرية وشعارات في أنطاليا، تركيا</h1>
           <svg class="hero__logo" id="hero-svg" viewBox="-4 -12 344 136" aria-hidden="true">
             <defs>
               <mask id="m-hero-bite" maskUnits="userSpaceOnUse" x="-20" y="-30" width="380" height="170">
@@ -421,7 +421,7 @@
             </g>
           </svg>
           <span class="hero__hint">اضغط على الشعار… وخذ قضمة</span>
-        </h1>
+        </div>
 
         <div class="hero__bottom">
           <div>
@@ -613,7 +613,7 @@
         <article class="persona reveal" id="persona-card">
           <aside class="persona__side">
             <div class="persona__avatar">س</div>
-            <h3 class="persona__name">سارة<br>مؤسِّسة علامة طموحة</h3>
+            <h3 class="persona__name">سارة <br>مؤسِّسة علامة طموحة</h3>
             <div class="persona__meta">
               <span><b>المرحلة:</b> إطلاق مشروع جديد أو تجديد الهوية (Rebranding)</span>
               <span><b>الهدف:</b> التحول من فكرة واعدة إلى براند كامل يقنع السوق</span>
@@ -985,7 +985,7 @@
         </div>
 
         <div class="behance-grid" id="behance-grid">
-          <figure class="board board--wide reveal" data-cat="physical" data-full="assets/images/mockup-storefront.webp" data-title="الحضور المعماري وواجهة العلامة · Storefront & Signage" data-desc="تطبيق الشعار والنظام اللوني على الواجهات الخارجية لضمان قراءة فورية خلال 3 ثوانٍ في الشارع.">
+          <figure class="board board--wide reveal" tabindex="0" role="button" data-cat="physical" data-full="assets/images/mockup-storefront.webp" data-title="الحضور المعماري وواجهة العلامة · Storefront & Signage" data-desc="تطبيق الشعار والنظام اللوني على الواجهات الخارجية لضمان قراءة فورية خلال 3 ثوانٍ في الشارع.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/mockup-storefront.webp" type="image/webp">
@@ -1002,7 +1002,7 @@
             </figcaption>
           </figure>
 
-          <figure class="board reveal" style="--d:.06s" data-cat="physical" data-full="assets/images/mockup-packaging.webp" data-title="منظومة التغليف والعبوات · Packaging System" data-desc="تحويل التوقيع البصري (القضمة) ونظام الألوان 60·30·10 إلى تجربة فتح عبوة لا تُنسى.">
+          <figure class="board reveal" style="--d:.06s" tabindex="0" role="button" data-cat="physical" data-full="assets/images/mockup-packaging.webp" data-title="منظومة التغليف والعبوات · Packaging System" data-desc="تحويل التوقيع البصري (القضمة) ونظام الألوان 60·30·10 إلى تجربة فتح عبوة لا تُنسى.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/mockup-packaging.webp" type="image/webp">
@@ -1019,7 +1019,7 @@
             </figcaption>
           </figure>
 
-          <figure class="board reveal" style="--d:.12s" data-cat="physical" data-full="assets/images/mockup-lifestyle.webp" data-title="الهوية في الحياة اليومية · Lifestyle & Touchpoints" data-desc="حضور العلامة في تفاصيل الحياة اليومية بأسلوب عصري يجمع بين الدفء والجرأة.">
+          <figure class="board reveal" style="--d:.12s" tabindex="0" role="button" data-cat="physical" data-full="assets/images/mockup-lifestyle.webp" data-title="الهوية في الحياة اليومية · Lifestyle & Touchpoints" data-desc="حضور العلامة في تفاصيل الحياة اليومية بأسلوب عصري يجمع بين الدفء والجرأة.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/mockup-lifestyle.webp" type="image/webp">
@@ -1036,7 +1036,7 @@
             </figcaption>
           </figure>
 
-          <figure class="board board--wide reveal" style="--d:.16s" data-cat="direction" data-full="assets/images/moodboard.webp" data-title="لوحة الإلهام والاتجاه الفني · Art Direction & Moodboard" data-desc="الركيزة البصرية التي تضبط المزاج اللوني، الملمس، والتكوين الهندسي قبل بدء التنفيذ.">
+          <figure class="board board--wide reveal" style="--d:.16s" tabindex="0" role="button" data-cat="direction" data-full="assets/images/moodboard.webp" data-title="لوحة الإلهام والاتجاه الفني · Art Direction & Moodboard" data-desc="الركيزة البصرية التي تضبط المزاج اللوني، الملمس، والتكوين الهندسي قبل بدء التنفيذ.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/moodboard.webp" type="image/webp">
@@ -1053,7 +1053,7 @@
             </figcaption>
           </figure>
 
-          <figure class="board reveal" style="--d:.2s" data-cat="digital" data-full="assets/images/facebook-cover-bold.webp" data-title="الحضور الرقمي الجريء · Bold Social Identity" data-desc="أغلفة وقوالب منصات التواصل الاجتماعي بالنسخة الجريئة عالية التباين.">
+          <figure class="board reveal" style="--d:.2s" tabindex="0" role="button" data-cat="digital" data-full="assets/images/facebook-cover-bold.webp" data-title="الحضور الرقمي الجريء · Bold Social Identity" data-desc="أغلفة وقوالب منصات التواصل الاجتماعي بالنسخة الجريئة عالية التباين.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/facebook-cover-bold.webp" type="image/webp">
@@ -1070,7 +1070,7 @@
             </figcaption>
           </figure>
 
-          <figure class="board reveal" style="--d:.24s" data-cat="digital" data-full="assets/images/facebook-cover-cream.webp" data-title="النظام الرقمي المتوازن · Editorial Social System" data-desc="النسخة الدافئة على الخلفية الكريمية لإبراز الرسائل التسويقية بوضوح وأناقة.">
+          <figure class="board reveal" style="--d:.24s" tabindex="0" role="button" data-cat="digital" data-full="assets/images/facebook-cover-cream.webp" data-title="النظام الرقمي المتوازن · Editorial Social System" data-desc="النسخة الدافئة على الخلفية الكريمية لإبراز الرسائل التسويقية بوضوح وأناقة.">
             <div class="board__media">
               <picture>
                 <source srcset="assets/images/facebook-cover-cream.webp" type="image/webp">
@@ -1104,7 +1104,7 @@
               <div class="bcard__face bcard__front"><svg viewBox="-4 -12 344 136"><use href="#otto-word"/></svg><span class="bcard__tag">Brands worth a bite.</span></div>
               <div class="bcard__face bcard__back">
                 <svg class="bcard__mark" viewBox="-4 -4 108 108"><use href="#otto-mark"/></svg>
-                <h4>Otto Creative<small>شريكك في بناء هوية بصرية متكاملة</small></h4>
+                <h4>Otto Creative <small>شريكك في بناء هوية بصرية متكاملة</small></h4>
                 <div class="bcard__info">
                   <a href="https://www.instagram.com/ottocreativeplus/" target="_blank" rel="noopener noreferrer">@ottocreativeplus</a>
                   <a href="https://www.tiktok.com/@ottocreative" target="_blank" rel="noopener noreferrer">tiktok.com/@ottocreative</a>
@@ -1701,8 +1701,9 @@
     }).then(function(d){
       if(d&&d.success){
         if(typeof gtagReportContactConversion==='function') gtagReportContactConversion();
-        msg.innerHTML='شكراً! تم تسجيلك. <a href="'+PDF+'" download>حمّل القائمة الآن (PDF)</a>';
-        f.querySelector('input[name=EMAIL]').value=''; window.open(PDF,'_blank');
+        msg.innerHTML='شكراً! تم تسجيلك. <a href="'+PDF+'" download="otto-3-second-test.pdf" target="_blank" rel="noopener">حمّل القائمة الآن (PDF)</a>';
+        f.querySelector('input[name=EMAIL]').value='';
+        var dl=document.createElement('a'); dl.href=PDF; dl.download='otto-3-second-test.pdf'; document.body.appendChild(dl); dl.click(); dl.remove();
       } else { throw 0; }
     }).catch(function(){ msg.textContent='تعذّر التسجيل الآن، حاول مرة أخرى أو راسلنا على info@ottocreativeplus.com'; })
     .finally(function(){ btn.disabled=false; });
@@ -1740,7 +1741,7 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="معاينة لوحة الهوية البصرية">
     <button class="lightbox__close" id="lightbox-close" type="button" aria-label="إغلاق المعاينة">✕</button>
     <div class="lightbox__inner">
-      <img class="lightbox__img" id="lightbox-img" src="assets/images/moodboard.webp" alt="معاينة لوحة الهوية البصرية — OTTO Creative" loading="lazy" decoding="async">
+      <img class="lightbox__img" id="lightbox-img" src="assets/images/moodboard.webp" alt="معاينة لوحة الهوية البصرية — OTTO Creative" width="1376" height="768" loading="lazy" decoding="async">
       <div class="lightbox__caption">
         <strong id="lightbox-title"></strong>
         <p id="lightbox-desc"></p>
@@ -1750,6 +1751,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast__dot" id="toast-dot"></span><span id="toast-text">تم النسخ</span></div>
 
-  <script src="js/main.js?v=noir-v7-seo" defer></script>
+  <script src="js/main.js?v=noir-v8-seo" defer></script>
 </body>
 </html>
