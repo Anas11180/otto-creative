@@ -26,7 +26,17 @@
     X-Robots-Tag = "noindex, follow"
 
 [[headers]]
-  for = "/concept-*"
+  for = "/concept-1-supercharge.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/concept-2-cinematic-3d.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/concept-3-brand-sandbox.html"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
