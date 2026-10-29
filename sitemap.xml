@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ottocreativeplus.com/</loc>
-    <lastmod>2026-10-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ottocreativeplus.com/assets/images/moodboard.jpg</image:loc>
+      <image:title>OTTO Creative — لوحة الإلهام والهوية البصرية المتكاملة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottocreativeplus.com/assets/images/mockup-storefront.jpg</image:loc>
+      <image:title>تطبيق الهوية البصرية على واجهة المتجر واللافتات الخارجية — OTTO Creative</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottocreativeplus.com/assets/images/mockup-packaging.jpg</image:loc>
+      <image:title>تصميم منظومة التغليف والعبوات التجارية — OTTO Creative</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottocreativeplus.com/assets/images/mockup-lifestyle.jpg</image:loc>
+      <image:title>تطبيقات الهوية البصرية والشعار في المنتجات اليومية — OTTO Creative</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottocreativeplus.com/assets/images/facebook-cover-bold.jpg</image:loc>
+      <image:title>تصميم قوالب السوشيال ميديا والحضور الرقمي — OTTO Creative</image:title>
+    </image:image>
   </url>
 </urlset>

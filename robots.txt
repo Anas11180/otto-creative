@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /posters/
 
 Sitemap: https://ottocreativeplus.com/sitemap.xml
